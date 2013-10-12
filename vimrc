@@ -335,3 +335,11 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile c
 
 " --- vim-gitgutter
 let g:gitgutter_enabled = 1
+
+" --- taglist
+let Tlist_Show_One_File = 1      "only show taglist of current file
+let Tlist_Exit_OnlyWindow = 1    "exit vim when Tlist is the last window
+let Tlist_Use_Right_Window = 1   "show Tlist on the right 
+
+" --- NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
