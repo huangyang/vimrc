@@ -243,10 +243,10 @@ autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 "--------------------------------------------------------------------------- 
 " ENCODING SETTINGS
 "--------------------------------------------------------------------------- 
-set encoding=utf-8                                  
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
+"let $LANG="zh_CN.UTF-8"
+"set encoding=utf-8                                  
+"set termencoding=utf-8
+"set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1,gb18030,gbk
 
 fun! ViewUTF8()
 	set encoding=utf-8                                  
@@ -283,24 +283,6 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 "}
-
-
-" --- AutoClose - Inserts matching bracket, paren, brace or quote 
-" fixed the arrow key problems caused by AutoClose
-if !has("gui_running")	
-   set term=linux
-   imap OA <ESC>ki
-   imap OB <ESC>ji
-   imap OC <ESC>li
-   imap OD <ESC>hi
-
-   nmap OA k
-   nmap OB j
-   nmap OC l
-   nmap OD h
-endif
-
-
 
 " --- Command-T
 let g:CommandTMaxHeight = 15
