@@ -203,7 +203,7 @@ cmap cd. lcd %:p:h
 "--------------------------------------------------------------------------- 
 
 " Ctrl-[ jump out of the tag stack (undo Ctrl-])
-map <C-[> <ESC>:po<CR>
+"map <C-[> <ESC>:po<CR>
 
 " ,g generates the header guard
 map <leader>g :call IncludeGuard()<CR>
@@ -245,7 +245,7 @@ autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 "--------------------------------------------------------------------------- 
 "let $LANG="zh_CN.UTF-8"
 "set encoding=utf-8                                  
-"set termencoding=utf-8
+"set termencoding=gbk
 "set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1,gb18030,gbk
 
 fun! ViewUTF8()
