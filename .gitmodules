@@ -94,3 +94,6 @@
 [submodule "bundle/a"]
 	path = bundle/a
 	url = https://github.com/vim-scripts/a.vim.git
+[submodule "bundle/cscope"]
+	path = bundle/cscope
+	url = git@github.com:vim-scripts/cscope.vim.git
