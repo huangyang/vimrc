@@ -218,27 +218,27 @@ endfun
 
 
 " Enable omni completion. (Ctrl-X Ctrl-O)
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
+" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+" autocmd FileType c set omnifunc=ccomplete#Complete
+" autocmd FileType java set omnifunc=javacomplete#Complete
 
 " use syntax complete if nothing else available
-if has("autocmd") && exists("+omnifunc")
-  autocmd Filetype *
-              \	if &omnifunc == "" |
-              \		setlocal omnifunc=syntaxcomplete#Complete |
-              \	endif
-endif
+" if has("autocmd") && exists("+omnifunc")
+"   autocmd Filetype *
+"               \	if &omnifunc == "" |
+"               \		setlocal omnifunc=syntaxcomplete#Complete |
+"               \	endif
+" endif
 
-set cot-=preview "disable doc preview in omnicomplete
+" set cot-=preview "disable doc preview in omnicomplete
 
 " make CSS omnicompletion work for SASS and SCSS
-autocmd BufNewFile,BufRead *.scss             set ft=scss.css
-autocmd BufNewFile,BufRead *.sass             set ft=sass.css
+" autocmd BufNewFile,BufRead *.scss             set ft=scss.css
+" autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 
 "--------------------------------------------------------------------------- 
 " ENCODING SETTINGS
@@ -290,7 +290,7 @@ let g:CommandTMaxHeight = 15
 " --- SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+"let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 
 " --- EasyMotion
@@ -325,3 +325,7 @@ let Tlist_Use_Right_Window = 1   "show Tlist on the right
 
 " --- NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeDirArrows=0
+
+" --- ctags
+set tags=tags;
